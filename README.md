@@ -6,7 +6,7 @@ The visitor pattern is used to visit multiple pieces of data, and then do some a
 
 In this lab you will create a visitor class that collects information on each node it visits for printing. You will create a PrintVisitor class that has the following definition so that it fully integrates with the composite class we’ve already designed.
 
-```
+```c++
 class PrintVisitor : public Visitor {
     private:
         std::string output;
