@@ -18,7 +18,7 @@ class CountVisitor{
         int paren;
 
     public:
-        PrintVisitor();
+        CountVisitor();
 
         void visit_op();
         int op_count();

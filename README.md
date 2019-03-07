@@ -26,7 +26,7 @@ class CountVisitor {
         int paren;
 
     public:
-        PrintVisitor();
+        CountVisitor();
 
         // Composite Pattern Visit Functions
         void visit_op();
