@@ -13,7 +13,7 @@ class Parenthesis : public Decorator{
 			return temp;
 		}
 		Iterator* create_iterator(){
-			return nullptr;
+			return new BinaryIterator(this);
 		}
 };
 

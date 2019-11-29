@@ -26,7 +26,7 @@ class BubbleSort : public Sort {
         }
         
         Iterator* create_iterator(){
-			    return nullptr;
+			    return new PreorderIterator(new Ceil(nullptr));
 		    }
 };
 

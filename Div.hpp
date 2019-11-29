@@ -12,7 +12,7 @@ class Div: public Base{
 		virtual double evaluate() { return value1->evaluate()/value2->evaluate(); }
 		virtual std::string stringify() { return (value1->stringify() + "/" + value2->stringify()); }
 		Iterator* create_iterator(){
-			return nullptr;
+			return new BinaryIterator(this);
 		}
 
 };

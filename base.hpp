@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include "iterator.hpp"
 using namespace std;
 
 class Base {

@@ -15,7 +15,7 @@ class Abs : public Decorator{
 			return abs(this->base->evaluate());
 		}
 		Iterator* create_iterator(){
-			return nullptr;
+			return new NullIterator(this);
 		}
 
 };

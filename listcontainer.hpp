@@ -51,6 +51,11 @@ class ListContainer : public Container{
 				
 		}
 		virtual int size(){ return containers.size(); }
+
+		Iterator* create_iterator(){
+			return new PreorderIterator(new Floor(nullptr));
+		}
+		
 };
 
 #endif

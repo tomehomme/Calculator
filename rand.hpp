@@ -11,7 +11,7 @@ class Rand : public Base {
         virtual double evaluate() { return value; }
         virtual std::string stringify() { return std::to_string(value); }
         Iterator* create_iterator(){
-			return nullptr;
+			return NullIterator(this);
 		}
         
 };

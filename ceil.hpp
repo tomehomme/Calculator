@@ -12,7 +12,7 @@ class Ceil : public Decorator{
 			return ceil(this->base->evaluate());
 		}
 		Iterator* create_iterator(){
-			return nullptr;
+			return new UnaryIterator(this->base);
 		}
 	
 };

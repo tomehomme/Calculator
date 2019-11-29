@@ -55,6 +55,9 @@ class VectorContainer : public Container{
       Iterator* create_iterator(){
 			return nullptr;
 		}
+    Iterator* create_iterator(){
+      return new PreorderIterator(new Ceil(nullptr));
+    }
 };
 
 #endif

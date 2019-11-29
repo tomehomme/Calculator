@@ -10,8 +10,8 @@ class Op : public Base {
         virtual double evaluate() { return value; }
         virtual std::string stringify() { return to_string(value); }
         Iterator* create_iterator(){
-			return nullptr;
-		}
+			return new NullIterator(this);
+		}   
         
 };
 

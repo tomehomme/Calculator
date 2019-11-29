@@ -38,9 +38,7 @@ class Container {
         // return container size
         virtual int size() = 0;
 
-        Iterator* create_iterator(){
-			return nullptr;
-		}
+        virtual Iterator* create_iterator()=0;
 };
 
 #endif //__CONTAINER_HPP__
