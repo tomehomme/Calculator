@@ -12,6 +12,9 @@ class Sort {
 
         /* Pure Virtual Functions */
         virtual void sort(Container* container) = 0;
+        Iterator* create_iterator(){
+			return nullptr;
+		}
 };
 
 #endif //__SORT_HPP__

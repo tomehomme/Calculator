@@ -20,6 +20,10 @@ class SelectionSort: public Sort{
 				if (minDex != i){container->swap(minDex,i);}
 			}
 		}
+
+		Iterator* create_iterator(){
+			return nullptr;
+		}
 			
 
 

@@ -51,6 +51,10 @@ class VectorContainer : public Container{
       virtual int size(){
           return this->containers.size();
       }
+
+      Iterator* create_iterator(){
+			return nullptr;
+		}
 };
 
 #endif
