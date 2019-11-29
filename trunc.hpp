@@ -12,6 +12,9 @@ class Truncate : public Decorator{
 			//Need to evaluate the contents of the base and return it as a string
 			return to_string( this->base->evaluate());
 		}
+		Iterator* create_iterator(){
+			return new UnaryIterator(this->base);
+		}
 };
 
 #endif

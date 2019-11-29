@@ -10,8 +10,11 @@ class Ceil : public Decorator{
 		Ceil(Base* base):Decorator(base){}
 		double evaluate(){
 			return ceil(this->base->evaluate());
-	
 		}
+		Iterator* create_iterator(){
+			return new UnaryIterator(this->base);
+		}
+	
 };
 
 

@@ -11,6 +11,9 @@ class Sub: public Base{
 		Sub( Base* value1, Base* value2 ) :Base() {this->num1=value1; this->num2=value2; }
 		virtual double evaluate() { return num1->evaluate() - num2->evaluate(); }
 		virtual string stringify() { return (num1->stringify() + "-" + num2->stringify()); }
+		Iterator* create_iterator(){
+			return new BinaryIterator(this);
+		}
 
 };
 

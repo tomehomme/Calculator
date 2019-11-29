@@ -12,8 +12,10 @@ class Abs : public Decorator{
 
 		Abs(Base* base): Decorator(base){}
 		double evaluate(){
-	
 			return abs(this->base->evaluate());
+		}
+		Iterator* create_iterator(){
+			return new NullIterator(this);
 		}
 
 };
