@@ -3,7 +3,7 @@
 
 #include <cmath>
 #include "decorator.hpp"
-
+#include "unary_iterator.cpp"
 
 class Abs : public Decorator{
 
@@ -15,10 +15,14 @@ class Abs : public Decorator{
 			return abs(this->base->evaluate());
 		}
 		Iterator* create_iterator(){
-			return nullptr;
-			//return new NullIterator(this);
+			//return nullptr;
+			return new UnaryIterator(base);
 		}
 
+				virtual Base* get_left(){
+			return this->base;
+		}
+		virtual Base* get_right(){return nullptr;}
 };
 
 

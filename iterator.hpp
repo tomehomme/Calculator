@@ -3,10 +3,10 @@
 
 #include <stack>
 
-#include "base.hpp"
+//#include "base.hpp"
 #include "container.hpp"
 
-class Base;
+//class Base;
 
 enum ChildIndicator { left, right, end };
 

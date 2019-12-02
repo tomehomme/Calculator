@@ -10,10 +10,11 @@ class Op : public Base {
         virtual double evaluate() { return value; }
         virtual std::string stringify() { return to_string(value); }
         Iterator* create_iterator(){
-			return nullptr;
+			//return nullptr;
 			return new NullIterator(this);
-
 	}   
+        Base* get_left(){return this;}
+        Base* get_right(){return nullptr;}
         
 };
 

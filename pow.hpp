@@ -11,9 +11,12 @@ class Pow : public Base {
         virtual double evaluate() { return pow(value1->evaluate(),value2->evaluate());}
         virtual std::string stringify() { return value1->stringify()+"**"+value2->stringify(); }
         Iterator* create_iterator(){
-		return nullptr;
-		return new BinaryIterator(this);
-	}
+            return new BinaryIterator(this);
+        }
+        Base* get_left(){
+            return this->value1;
+        }
+		Base* get_right(){return this->value2;}
         
 };
 

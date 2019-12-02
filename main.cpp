@@ -2,7 +2,7 @@
 #include <stack>
 #include <stdexcept>
 
-
+//#include "base.hpp"
 //#include "iterator.cpp"
 //#include "unary_iterator.cpp"
 //#include "binary_iterator.cpp"
@@ -31,6 +31,9 @@
 
 #include "Factory.hpp"
 
+
+#include "iterator.hpp"
+#include "preorder_iterator.cpp"
 using namespace std;
 
 
@@ -40,9 +43,11 @@ int main(int argc, char** argv) {
     Base* calculate = expression->parse(argv, argc);
     
     if (calculate){
-        cout << calculate->stringify() << "=" <<  calculate->evaluate() << endl;   
-    }
+       cout << calculate->stringify() << "=" <<  calculate->evaluate() << endl;   
+   }
 
+   Parenthesis* dummy = new Parenthesis(new Ceil(new Add(new Op(5), new Op(6))));
+    PreorderIterator* trav = new PreorderIterator(dummy);
        
     return 0;
 }

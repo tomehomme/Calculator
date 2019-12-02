@@ -13,9 +13,13 @@ class Truncate : public Decorator{
 			return to_string( this->base->evaluate());
 		}
 		Iterator* create_iterator(){
-			return nullptr;
-			//return new UnaryIterator(this->base);
+		//	return nullptr;
+			return new UnaryIterator(this->base);
 		}
+		virtual Base* get_left(){
+			return this->base;
+		}
+		virtual Base* get_right(){return nullptr;}
 };
 
 #endif

@@ -12,9 +12,12 @@ class Sub: public Base{
 		virtual double evaluate() { return num1->evaluate() - num2->evaluate(); }
 		virtual string stringify() { return (num1->stringify() + "-" + num2->stringify()); }
 		Iterator* create_iterator(){
-			return nullptr;
-			//return new BinaryIterator(this);
+			return new BinaryIterator(this);
 		}
+		Base* get_left(){
+			return this->num1;
+		}
+		Base* get_right(){return this->num2;}
 
 };
 

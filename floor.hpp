@@ -14,10 +14,15 @@ class Floor : public Decorator{
 		}	
 
 		Iterator* create_iterator(){
-			return nullptr;
+		//	return nullptr;
 			return new UnaryIterator(base);
 		}
 
+
+		virtual Base* get_left(){
+			return this->base;
+		}
+		virtual Base* get_right(){return nullptr;}
 };
 
 

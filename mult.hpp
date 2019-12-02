@@ -15,7 +15,11 @@ class Mult : public Base {
 		return nullptr;		
 		//return new BinaryIterator(this);
 	}
-        
+		Base* get_left(){
+			return this->value1;
+		}
+		Base* get_right(){return this->value2;}    
+    
 };
 
 #endif

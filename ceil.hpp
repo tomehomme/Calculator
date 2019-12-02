@@ -12,10 +12,14 @@ class Ceil : public Decorator{
 			return ceil(this->base->evaluate());
 		}
 		Iterator* create_iterator(){
-			return nullptr;
+		//	return nullptr;
 			return new UnaryIterator(this->base);
 		}
 	
+				virtual Base* get_left(){
+			return this->base;
+		}
+		virtual Base* get_right(){return nullptr;}
 };
 
 

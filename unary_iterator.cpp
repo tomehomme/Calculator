@@ -1,26 +1,26 @@
 #include "iterator.hpp"
 
 UnaryIterator::UnaryIterator(Base* ptr) : Iterator(ptr) {
-    this->c = left;
+    this->c = ChildIndicator::left;
 }
 
 void UnaryIterator::first() { 
-    this->c = left; 
+    this->c = ChildIndicator::left; 
 }
 void UnaryIterator::next() {
-    if(this->c == left) {
-        this->c = end;
+    if(this->c == ChildIndicator::left) {
+        this->c = ChildIndicator::end;
     }
-    this->c = end;
+    this->c = ChildIndicator::end;
 }
 bool UnaryIterator::is_done() { 
-    if(this->c == end) {
+    if(this->c == ChildIndicator::end) {
         return true;
     }
     return false;
 }
 Base* UnaryIterator::current() { 
-    if(this->c == left) {
+    if(this->c == ChildIndicator::left) {
         return this->self_ptr->get_left();
     }
     return nullptr;
