@@ -18,6 +18,9 @@ class Sub: public Base{
 			return this->num1;
 		}
 		Base* get_right(){return this->num2;}
+		virtual void visit(CountVisitor* c) {
+			c->visit_sub();
+		}
 
 };
 

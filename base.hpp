@@ -8,12 +8,13 @@
 
 
 #include "iterator.hpp"
+#include "visitor.cpp"
 //#include "unary_iterator.cpp"
 //#include "binary_iterator.cpp"
 //#include "preorder_iterator.cpp"
 using namespace std;
 
-//class Iterator;
+
 
 class Base {
     public:
@@ -23,8 +24,9 @@ class Base {
         virtual double evaluate() = 0;
         virtual std::string stringify() = 0;
         virtual Iterator* create_iterator() = 0;
-	virtual Base* get_left() = 0;
-	virtual Base* get_right() = 0;
+        virtual Base* get_left() = 0;
+        virtual Base* get_right() = 0;
+        virtual void visit(CountVisitor* c) = 0;
 };
 
 

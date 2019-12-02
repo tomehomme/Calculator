@@ -19,6 +19,9 @@ class Div: public Base{
 		}
 		Base* get_right(){return this->value2;}
 
+		virtual void visit(CountVisitor* c) {
+			c->visit_div();
+		}
 };
 
 #endif

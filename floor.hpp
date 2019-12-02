@@ -23,6 +23,9 @@ class Floor : public Decorator{
 			return this->base;
 		}
 		virtual Base* get_right(){return nullptr;}
+		virtual void visit(CountVisitor* c) {
+			c->visit_floor();
+		}
 };
 
 
