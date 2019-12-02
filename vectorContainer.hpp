@@ -51,13 +51,7 @@ class VectorContainer : public Container{
       virtual int size(){
           return this->containers.size();
       }
-
-      Iterator* create_iterator(){
-			return nullptr;
-		}
-    Iterator* create_iterator(){
-      return new PreorderIterator(new Ceil(nullptr));
-    }
+   
 };
 
 #endif

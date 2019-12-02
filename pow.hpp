@@ -11,8 +11,9 @@ class Pow : public Base {
         virtual double evaluate() { return pow(value1->evaluate(),value2->evaluate());}
         virtual std::string stringify() { return value1->stringify()+"**"+value2->stringify(); }
         Iterator* create_iterator(){
-			return new BinaryIterator(this);
-		}
+		return nullptr;
+		return new BinaryIterator(this);
+	}
         
 };
 

@@ -12,8 +12,9 @@ class Mult : public Base {
         virtual std::string stringify() { return value1->stringify() + "*" + value2->stringify(); }
 
         Iterator* create_iterator(){
-			return new BinaryIterator(this);
-		}
+		return nullptr;		
+		//return new BinaryIterator(this);
+	}
         
 };
 

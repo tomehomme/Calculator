@@ -1,5 +1,12 @@
 #include <iostream>
 #include <stack>
+#include <stdexcept>
+
+
+//#include "iterator.cpp"
+//#include "unary_iterator.cpp"
+//#include "binary_iterator.cpp"
+//#include "preorder_iterator.cpp"
 
 #include "op.hpp"
 #include "mult.hpp"
@@ -10,10 +17,10 @@
 #include "Div.hpp"
 
 
-//#include "listcontainer.hpp"
-//#include "vectorContainer.hpp"
-//#include "bubbleSort.hpp"
-//#include "selectionsort.hpp"
+#include "listcontainer.hpp"
+#include "vectorContainer.hpp"
+#include "bubbleSort.hpp"
+#include "selectionsort.hpp"
 
 #include "trunc.hpp"
 #include "paren.hpp"

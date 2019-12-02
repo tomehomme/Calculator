@@ -4,7 +4,6 @@
 #include "sort.hpp"
 #include "base.hpp"
 
-
 class Sort;
 class Base;
 
@@ -37,8 +36,6 @@ class Container {
         virtual Base* at(int i) = 0;
         // return container size
         virtual int size() = 0;
-
-        virtual Iterator* create_iterator()=0;
 };
 
 #endif //__CONTAINER_HPP__

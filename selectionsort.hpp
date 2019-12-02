@@ -21,9 +21,7 @@ class SelectionSort: public Sort{
 			}
 		}
 
-		Iterator* create_iterator(){
-			return new PreorderIterator(new Ceil(nullptr));
-		}
+	
 			
 
 
