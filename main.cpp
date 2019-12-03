@@ -48,8 +48,8 @@ int main(int argc, char** argv) {
        cout << calculate->stringify() << "=" <<  calculate->evaluate() << endl;   
    }
 
-   Parenthesis* dummy = new Parenthesis(new Ceil(new Add(new Op(5), new Op(6))));
-    PreorderIterator* trav = new PreorderIterator(dummy);
+ 
+    PreorderIterator* trav = new PreorderIterator(calculate);
     CountVisitor* counts = new CountVisitor();
       while (!trav->is_done()){
 		trav->current()->visit(counts);

@@ -16,6 +16,7 @@ class Op : public Base {
         Base* get_left(){return this;}
         Base* get_right(){return nullptr;}
 		virtual void visit(CountVisitor* c) {
+			cout << "visiting" << endl;
 			c->visit_op();
 		}        
 };
