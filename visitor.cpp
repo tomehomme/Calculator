@@ -32,7 +32,7 @@
             trunc = 0;
             paren = 0;
         }
-        void CountVisitor::visit_op(){std::cout << "ops visit" << std::endl; this->ops++;}
+        void CountVisitor::visit_op(){this->ops++;}
         int CountVisitor::op_count(){return this->ops;}
         void CountVisitor::visit_rand(){this->rands++;}
         int CountVisitor::rand_count(){return this->rands;}

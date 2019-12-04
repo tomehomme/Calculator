@@ -15,7 +15,7 @@ class Floor : public Decorator{
 
 		Iterator* create_iterator(){
 		//	return nullptr;
-			return new UnaryIterator(base);
+			return new UnaryIterator(this);
 		}
 
 

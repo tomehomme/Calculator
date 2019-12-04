@@ -13,7 +13,7 @@ class Ceil : public Decorator{
 		}
 		Iterator* create_iterator(){
 		//	return nullptr;
-			return new UnaryIterator(this->base);
+			return new UnaryIterator(this);
 		}
 	
 				virtual Base* get_left(){
