@@ -19,7 +19,7 @@ class Mult : public Base {
 			return this->value1;
 		}
 		Base* get_right(){return this->value2;}    
-		virtual void visit(CountVisitor* c) {
+		virtual void accept(CountVisitor* c) {
 			c->visit_mult();
 		}    
 };

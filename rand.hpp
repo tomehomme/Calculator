@@ -16,7 +16,7 @@ class Rand : public Base {
 	}
     Base* get_left(){return this;}
         Base* get_right(){return nullptr;}
-		virtual void visit(CountVisitor* c) {
+		virtual void accept(CountVisitor* c) {
 			c->visit_rand();
 		}        
 };

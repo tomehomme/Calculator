@@ -55,7 +55,7 @@ int main(int argc, char** argv) {
       while (!trav->is_done()){
    
 //	 cout<<"curr: " << trav->current()->stringify() << endl;
-		trav->current()->visit(counts);
+		trav->current()->accept(counts);
 		trav->next();
 	}
 	cout << endl;

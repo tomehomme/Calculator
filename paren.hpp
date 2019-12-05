@@ -20,7 +20,7 @@ class Parenthesis : public Decorator{
 			return this->base;
 		}
 		virtual Base* get_right(){return nullptr;}
-		virtual void visit(CountVisitor* c) {
+		virtual void accept(CountVisitor* c) {
 			c->visit_paren();
 		}
 };
