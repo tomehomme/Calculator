@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
    }
 
  
-    PreorderIterator* trav = new PreorderIterator((calculate));
+    PreorderIterator* trav = new PreorderIterator(new Abs(new Abs(calculate)));
   	trav->first(); 
       CountVisitor* counts = new CountVisitor();
       while (!trav->is_done()){
