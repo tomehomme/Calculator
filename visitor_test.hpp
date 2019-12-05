@@ -4,21 +4,21 @@
 #include "gtest/gtest.h"
 #include "visitor.hpp"
 #include "iterator.hpp"
-
+#include "base.hpp"
 #include "preorder_iterator.cpp"
 
 TEST(VisitorTest, NullIterator){
 	int count = 0;
 	Base* op1 = new Op(1);
 	NullIterator* test = new NullIterator(op1);
-	test->first();
+//	test->first();
 	while(!test->is_done()){
-		cout << test->current()->stringify()<<endl;
+	//	cout << test->current()->stringify()<<endl;
 		test->next();
 		count++;
 	}
 
-	EXPECT_EQ(1,count);
+	EXPECT_EQ(nullptr,test->current());
 
 }
 
@@ -39,7 +39,7 @@ TEST(VisitorTest, PreorderIterator){
 	Base* op1 = new Op(4.1);
 	Base* op2 = new Op(6);
 	Base* mult = new Mult(op1,op2);
-	Base ceil = new Ceil(mult);	
+//	Base ceil = new Ceil(mult);	
 	
 }
 
