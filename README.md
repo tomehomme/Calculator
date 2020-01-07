@@ -1,16 +1,11 @@
-# Visitor Pattern
+# Calculator
 
-> Author: Brian Crites ([@brrcrites](https://github.com/brrcrites))
+A calculator created using multiple design patterns. These design patterns include:
 
-**You *must* work in a group of two for this lab**
-
-## Iterator Class
-
-You've been provided with four files which contain declrations and definitions for the following five iterator classes:
-
-* Iterator: this is the base class for definint the interface for all the other iterator classes
-* NullIterator: this iterator is created by expression tree classes which have no children to iterator over such as the operands
-* BinaryIterator: this iterator is created by expression tree classes with two children, such as operators, and returns one of the children per iteration
+* Factory Pattern: this pattern is used to parse user input and create an expression tree
+* Decorator Pattern: this pattern is used to allow users to sort expressions. Sorting options include: bubble sort and 
+* Visitor Pattern: this pattern is used to count the number of each type of element within an expression.
+    - For example, the expression "3 * 5 + 4" has 3 operands, 1 multiplication, and 1 addition
 * UnaryIterator: this iterator is created by expression tree classes with one child, such as decorators, and returns the only child on its first iteration
 * PreorderIterator: this iterator is created by a user to traverse an entire expression tree. Note that it will skip the first node in the expression tree so its helpful to add a "dummy" decorator node as root which will be skipped
 
